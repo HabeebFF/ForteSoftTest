@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li class="flashed-message">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif%}
+    {% endwith %}
+
+
+
+    <script>
+        setTimeout(function() {
+            var messages = document.getElementsByClassName('flashed-message');
+            
+            for (var i = 0; i < messages.length; i++) {
+                messages[i].style.display = 'none';
+            }
+        }, 5000)
+    </script>
+
+{% endblock %}

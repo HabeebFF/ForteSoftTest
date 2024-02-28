@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Api
+{% endblock %}
+
+{% block content %}
+<form action="/api" method="post">
+    <label for="country">Country: </label>
+    <input type="text" id="country" name="country" required>
+    <input type="submit" name="test" id="test">
+</form>
+
+{% if response %}
+    <br>
+    <pre>{{ response }}</pre>
+    
+{% else %}
+<p></p>
+{% endif %}
+{% endblock %}

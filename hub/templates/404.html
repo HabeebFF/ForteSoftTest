@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+404 Error
+{% endblock %}
+
+{% block content %}
+<h1>Hola Friend, you just opened a non-existing page, please go back or reroute back
+    to the <a href="{{ url_for('home') }}">Home</a> Page :>
+</h1>
+{% endblock %}
