@@ -1,4 +1,4 @@
-from hub import app, login_required, login_manager, request, redirect, login_user, logout_user, current_user, url_for, flash
+from hub import app, api_bp, login_required, login_manager, request, redirect, login_user, logout_user, current_user, url_for, flash
 from flask import render_template
 from hub.model import User, db
 from hub import request, generate_password_hash, check_password_hash
@@ -79,3 +79,11 @@ def api():
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
+
+
+# @api_bp.route('/hello')
+# def hello():
+#     return 'Hello World'
+
+
+# app.register_blueprint(api_bp, url_prefix='/ai')
