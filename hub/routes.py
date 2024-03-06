@@ -81,9 +81,10 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
-# @api_bp.route('/hello')
-# def hello():
-#     return 'Hello World'
+
+@api_bp.route('/hello')
+def hello():
+    return 'Hello World'
 
 
-# app.register_blueprint(api_bp, url_prefix='/ai')
+app.register_blueprint(api_bp)
